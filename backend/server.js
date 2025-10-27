@@ -8,7 +8,8 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS
 app.use(cors({
-  origin:  "https://babul-ki-dua-pyt1.vercel.app/" 
+  origin:  "https://babul-ki-dua-pyt1.vercel.app/", 
+  methods:["GET","POST"],
 }));
 
 app.use(express.json()); 
