@@ -8,7 +8,7 @@ export default ({ mode }) => {
   return defineConfig({
     server: {
       proxy: {
-        '/api': env.VITE_API_URL, // use the loaded env variable
+        '/api': 'https://babul-ki-dua.vercel.app', 
       },
     },
     plugins: [react()],
