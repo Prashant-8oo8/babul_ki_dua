@@ -7,10 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Enable CORS
-app.use(cors({
-  origin:  "https://babul-ki-dua-pyt1.vercel.app/", 
-  methods:["GET","POST"],
-}));
+app.use(cors());
 
 app.use(express.json()); 
 
