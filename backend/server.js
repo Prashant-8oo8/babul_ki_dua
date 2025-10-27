@@ -1,12 +1,17 @@
 import express from "express";
 import connectDB from "./db.js";
 import router from "./mainRoutes.js";
+import cors from "cors"; 
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json()); // parses JSON bodies
+// Enable CORS
+app.use(cors({
+  origin:  "https://babul-ki-dua-pyt1.vercel.app/" 
+}));
 
+app.use(express.json()); 
 
 connectDB();
 
